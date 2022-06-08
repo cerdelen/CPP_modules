@@ -1,15 +1,17 @@
 #include "Fixed.hpp"
 #include "Point.hpp"
 
-bool bsp( Point const a, Point const b, Point const c, Point const point);
+bool bsp( const Point &a, const Point &b, const Point& c, const Point& point);
 
 int main(void)
 {
 	Point a(0, 0);
-	Point b(0, 1);
-	Point c(1, 0);
-	Point p(0.5f, 0.5f);
+	Point b(10, 0);
+	Point c(0, 10);
+	Point p(1, 1);
 
-	std::cout << "no init errors!" << std::endl;
-	std::cout << bsp(a, b, c, p) << std::endl;
+	if (bsp(a, b, c, p) == true)
+		std::cout << "true" << std::endl;
+	else
+		std::cout << "false" << std::endl;
 }

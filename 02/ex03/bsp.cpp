@@ -1,16 +1,48 @@
 #include "Point.hpp"
 #include "Fixed.hpp"
 
-bool bsp( Point const a, Point const b, Point const c, Point const point){
-	std::cout << "got here1" << std::endl;
-	Fixed s1 = c.getY() - a.getY();
-	Fixed s2 = c.getX() - a.getX();
-	Fixed s3 = b.getY() - a.getY();
-	Fixed s4 = point.getY() - a.getY();
+typedef struct s_vec
+{
+	Fixed	x;
+	Fixed	y;
+}	t_vec;
 
-	std::cout << "got here" << std::endl;
+Fixed	ft_dot(t_vec a, t_vec b)
+{
+	Fixed	out;
 
-	Fixed w1 = (a.getX() * s1 + s4 * s2 - point.getX() * s1) / (s3 * s2 - (b.getX() - a.getX()) * s1);
-	Fixed w2 = (s4 - w1 * s3) / s1;
-	return (w1 >= 0 && w2 >= 0 && (w1 + w2) <= 1);
+	out = (a.x * b.x) + (a.y * b.y);
+	return (out);
+}
+
+bool bsp( const Point &a, const Point &b, const Point& c, const Point& point){
+t_vec	v0;
+t_vec	v1;
+t_vec	v2;
+// Compute vectors   
+
+v0.x = c.getX() - a.getX();
+v0.y = c.getY() - a.getY();
+
+v1.x = b.getX() - a.getX();
+v1.y = b.getY() - a.getY();
+
+v2.x = point.getX() - a.getX();
+v2.y = point.getY() - a.getY();
+
+
+// Compute dot products
+Fixed dot00 = ft_dot(v0, v0);
+Fixed dot01 = ft_dot(v0, v1);
+Fixed dot02 = ft_dot(v0, v2);
+Fixed dot11 = ft_dot(v1, v1);
+Fixed dot12 = ft_dot(v1, v2);
+
+// Compute barycentric coordinates
+Fixed	invDenom((Fixed) 1 / (dot00 * dot11 - dot01 * dot01));
+Fixed	u = (dot11 * dot02 - dot01 * dot12) * invDenom;
+Fixed	v = (dot00 * dot12 - dot01 * dot02) * invDenom;
+
+// Check if point is in triangle
+return (u >= 0) && (v >= 0) && (u + v < 1);
 }

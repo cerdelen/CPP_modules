@@ -20,8 +20,6 @@ Point&		Point::operator=(const Point& copy){
 	Point	*out;
 
 	out = new Point(copy);
-
-
 	return (*out);
 }
 
