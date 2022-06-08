@@ -10,5 +10,6 @@ int main(void)
 	Point c(1, 0);
 	Point p(0.5f, 0.5f);
 
+	std::cout << "no init errors!" << std::endl;
 	std::cout << bsp(a, b, c, p) << std::endl;
 }

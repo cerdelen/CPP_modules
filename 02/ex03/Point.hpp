@@ -9,6 +9,7 @@ private:
 	const Fixed y_;
 public:
 	Point();
+	Point(const int x, const int y);
 	Point(const float x, const float y);
 	Point(const Point& copy);
 	~Point();
