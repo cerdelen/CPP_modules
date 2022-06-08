@@ -125,3 +125,28 @@ Fixed	Fixed::operator/(const Fixed &num2) const{
 	return (out);
 }
 
+
+Fixed&		Fixed::operator++(void){
+	val_ += 1;
+	return (*this);
+}
+
+Fixed		Fixed::operator++(int){
+	Fixed	out(*this);
+
+	val_ +=1;
+	return (out);
+}
+
+Fixed&		Fixed::operator--(void){
+	val_ -= 1;
+	return (*this);
+}
+
+Fixed		Fixed::operator--(int){
+	Fixed	out(*this);
+
+	val_ -=1;
+	return (out);
+}
+

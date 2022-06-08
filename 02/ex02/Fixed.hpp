@@ -10,22 +10,18 @@ class Fixed
 		static const int	bits_ = 8;
 
 	public:
-		Fixed();								//default const
+		Fixed();
 		Fixed(const int);
 		Fixed(const float);
-		Fixed(const Fixed& copy);				//copy const
-		~Fixed();								//destructor
+		Fixed(const Fixed& copy);
+		~Fixed();
 
 
-		Fixed&			operator=(const Fixed& copy);	//A copy assignment operator overload
+		Fixed&			operator=(const Fixed& copy);
 		int				getRawBits( void ) const;
 		void			setRawBits( int const raw );
 		int				toInt( void ) const;
 		float			toFloat( void ) const;
-
-
-
-
 
 //		comparison operators
 		bool	operator>(const Fixed &num2) const;
@@ -48,13 +44,10 @@ class Fixed
 		static const Fixed&			max(const Fixed& num1, const Fixed& num2);
 
 //		increment/decrement functions
-
-// Add public member functions to your class to overload the following operators:
-
-// 			• The 4 increment/decrement (pre-increment and post-increment, pre-decrement and post-decrement) operators, that will increase or decrease the fixed-point value from the smallest representable ε such as 1 + ε > 1.
-
-
-
+		Fixed		operator++(int);
+		Fixed&		operator++(void);
+		Fixed		operator--(int);
+		Fixed&		operator--(void);
 };
 
 std::ostream&	operator<<(std::ostream &os, const Fixed &nbr);
