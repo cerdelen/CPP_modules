@@ -1,14 +1,6 @@
 #include "Point.hpp"
 #include "Fixed.hpp"
 
-Fixed		Point::getX( void ) const{
-	return (x_);
-}
-
-Fixed		Point::getY( void ) const{
-	return (y_);
-}
-
 bool bsp( Point const a, Point const b, Point const c, Point const point){
 	Fixed s1 = c.getY() - a.getY();
 	Fixed s2 = c.getX() - a.getX();

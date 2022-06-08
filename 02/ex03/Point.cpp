@@ -14,14 +14,23 @@ Point::~Point( void ){
 }
 
 Point&		Point::operator=(const Point& copy){
-	Point	out(copy);
+	Point	*out;
 
-	return (out);
+	out = new Point(copy);
+
+
+	return (*out);
 }
-
-
 
 Fixed&	Fixed::operator=(const Fixed& copy){
 	val_ = copy.val_;
 	return (*this);
+}
+
+Fixed		Point::getX( void ) const{
+	return (x_);
+}
+
+Fixed		Point::getY( void ) const{
+	return (y_);
 }
