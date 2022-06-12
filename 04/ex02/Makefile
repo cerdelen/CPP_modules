@@ -1,4 +1,4 @@
-SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+SRC = main.cpp
 
 name = ex02
 

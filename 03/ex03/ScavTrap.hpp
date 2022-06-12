@@ -16,6 +16,8 @@ class ScavTrap: public ClapTrap
 		void	guardGate();
 };
 
+
+
 // ScavTrap will use the attributes of ClapTrap (update ClapTrap in consequence) and must initialize them to:
 // • Name, which is passed as parameter to a constructor
 // • Hit points (100), represent the health of the ClapTrap

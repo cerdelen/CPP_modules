@@ -1,6 +1,6 @@
-SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+SRC = main.cpp
 
-name = ex02
+name = ex00
 
 flags = -std=c++98 -Wall -Wextra -Werror
 
