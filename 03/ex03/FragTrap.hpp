@@ -4,7 +4,7 @@
 #include "ClapTrap.hpp"
 
 
-class FragTrap: public ClapTrap
+class FragTrap: virtual public ClapTrap
 {
 	public:
 		FragTrap();
@@ -12,6 +12,8 @@ class FragTrap: public ClapTrap
 		~FragTrap();
 
 		void	highFiveGuys( void );
+		void	initHitPoints(void);
+		void	initDamage(void);
 };
 
 #endif

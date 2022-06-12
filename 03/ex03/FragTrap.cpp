@@ -1,16 +1,16 @@
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap(): ClapTrap("Default_Scav"){
-	hp_ = 100;
+	initHitPoints();
+	initDamage();
 	mana_ = 100;
-	a_dmg_ = 30;
 	std::cout << "Default FragTrap constructor" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name): ClapTrap(name){
-	hp_ = 100;
+	initHitPoints();
+	initDamage();
 	mana_ = 100;
-	a_dmg_ = 30;
 	std::cout << "String FragTrap constructor" << std::endl;
 }
 
@@ -20,4 +20,12 @@ FragTrap::~FragTrap(){
 
 void	FragTrap::highFiveGuys( void ){
 	std::cout << name_ << " requests High-Fives!" << std::endl;
+}
+
+void	FragTrap::initHitPoints( void ){
+	hp_ = 100;
+}
+
+void	FragTrap::initDamage( void ){
+	a_dmg_ = 30;
 }

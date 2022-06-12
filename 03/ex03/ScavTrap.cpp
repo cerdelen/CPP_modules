@@ -2,14 +2,14 @@
 
 ScavTrap::ScavTrap(): ClapTrap("Default_Scav"){
 	hp_ = 100;
-	mana_ = 50;
+	initMana();
 	a_dmg_ = 20;
 	std::cout << "Default ScavTrap constructor" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name){
 	hp_ = 100;
-	mana_ = 50;
+	initMana();
 	a_dmg_ = 20;
 	std::cout << "String ScavTrap constructor" << std::endl;
 
@@ -48,4 +48,8 @@ void	ScavTrap::guardGate(){
 	}
 	std::cout << "Trap " << name_ << " is now guarding the Gate!" << std::endl;
 	mana_ -= 1;
+}
+
+void	ScavTrap::initMana( void ){
+	mana_ = 50;
 }
