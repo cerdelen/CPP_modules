@@ -3,13 +3,13 @@
 
 #include "Animal.hpp"
 
-class Cat: private Animal
+class Cat: public Animal
 {
-private:
-	/* data */
-public:
-	Cat(/* args */);
-	~Cat();
+	private:
+		
+	public:
+		Cat();
+		~Cat();
 };
 
 

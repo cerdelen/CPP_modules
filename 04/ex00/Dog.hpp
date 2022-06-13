@@ -2,13 +2,14 @@
 #define DOG_H
 
 #include "Animal.hpp"
-class Dog
+
+class Dog: public Animal
 {
-private:
-	/* data */
-public:
-	Dog(/* args */);
-	~Dog();
+	private:
+
+	public:
+		Dog();
+		~Dog();
 };
 
 
