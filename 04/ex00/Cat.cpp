@@ -1,9 +1,7 @@
 #include "Cat.hpp"
 
-Cat::Cat()
+Cat::Cat(): Animal("Cat", "miaus")
 {
-	type_ = "Cat";
-	sound_ = "miaus";
 	std::cout << "Default Cat Constructor!" << std::endl;
 }
 

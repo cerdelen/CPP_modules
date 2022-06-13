@@ -1,13 +1,9 @@
 #include "Dog.hpp"
 
-Dog::Dog(/* args */)
-{
-	type_ = "Dog";
-	sound_ = "barks";
+Dog::Dog(): Animal("Dog", "barks"){
 	std::cout << "Default Dog Constructor!" << std::endl;
 }
 
-Dog::~Dog()
-{
+Dog::~Dog(){
 	std::cout << "Default Dog Deconstructor!" << std::endl;
 }

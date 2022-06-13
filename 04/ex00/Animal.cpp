@@ -15,11 +15,15 @@ Animal::Animal(std::string type, std::string sound): type_(type), sound_(sound)
 	std::cout << "Type and sound Animal Constructor!" << std::endl;
 }
 
-void	Animal::makeSound( void ){
+void	Animal::makeSound( void ) const{
 	std::cout << type_ << " " << sound_<< "!" << std::endl;
 }
 
 Animal::~Animal()
 {
 	std::cout << "Default Animal Deconstructor!" << std::endl;
+}
+
+std::string Animal::getType( void ) const{
+	return (type_);
 }

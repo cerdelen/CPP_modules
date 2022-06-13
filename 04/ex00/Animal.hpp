@@ -14,7 +14,8 @@ class Animal
 		Animal(std::string type, std::string sound);
 		~Animal();
 
-		void	makeSound( void );
+		std::string		getType( void ) const;
+		void			makeSound( void ) const;
 };
 
 
