@@ -2,33 +2,14 @@
 
 int main()
 {
-	ClapTrap	t1("LoL");
+	ClapTrap	t1("Trappy");
 
 	t1.attack("Knoodle");
 	t1.beRepaired(2);
-	t1.takeDamage(2);
-	t1.takeDamage(1);
-	t1.takeDamage(1);
-	t1.takeDamage(1);
-	t1.takeDamage(1);
-	t1.beRepaired(2);
-	t1.beRepaired(2);
-	t1.beRepaired(2);
-	t1.beRepaired(2);
+	ClapTrap t2("tommy");
+	t2.attack("Lol");
+	t2 = t1;
+	t2.attack("Lol");
 
-	t1.takeDamage(1);
-	t1.takeDamage(1);
-	t1.beRepaired(2);
-	t1.beRepaired(2);
-	t1.beRepaired(2);
-	t1.beRepaired(2);
-	t1.beRepaired(2);
-	t1.beRepaired(2);
-	t1.beRepaired(2);
-	t1.beRepaired(2);
-	t1.beRepaired(2);
-	t1.beRepaired(2);
-	t1.beRepaired(2);
-	t1.beRepaired(2);
-	t1.takeDamage(1);
+
 }

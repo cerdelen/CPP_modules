@@ -53,3 +53,16 @@ void	ClapTrap::beRepaired(unsigned int amount){
 	hp_ += amount;
 	mana_ -= 1;
 }
+
+ClapTrap::ClapTrap(const ClapTrap& copy): name_(copy.name_), hp_(copy.hp_), mana_(copy.mana_), a_dmg_(copy.a_dmg_){
+	std::cout << "Copy constructor called" << std::endl;
+}
+
+ClapTrap&	ClapTrap::operator=(const ClapTrap& copy){
+	name_ = copy.name_;
+	hp_ = copy.hp_;
+	mana_ = copy.mana_;
+	a_dmg_ = copy.a_dmg_;
+	std::cout << "Equal sign operator overload called" << std::endl;
+	return (*this);
+}
