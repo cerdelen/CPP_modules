@@ -21,3 +21,17 @@ DiamondTrap::~DiamondTrap(){
 void	DiamondTrap::whoAmI(){
 	std::cout << diamond_name << "'s DiamondTrap name = " << diamond_name<< std::endl << "It's ClapTrap name is = " <<  name_  << std::endl;
 }
+
+DiamondTrap::DiamondTrap(const DiamondTrap& copy){
+	*this = copy;
+	std::cout << "Copy constructor called" << std::endl;
+}
+
+DiamondTrap&	DiamondTrap::operator=(const DiamondTrap& copy){
+	name_ = copy.name_;
+	hp_ = copy.hp_;
+	mana_ = copy.mana_;
+	a_dmg_ = copy.a_dmg_;
+	std::cout << "Equal sign operator overload called" << std::endl;
+	return (*this);
+}

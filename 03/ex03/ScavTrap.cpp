@@ -53,3 +53,17 @@ void	ScavTrap::guardGate(){
 void	ScavTrap::initMana( void ){
 	mana_ = 50;
 }
+
+ScavTrap::ScavTrap(const ScavTrap& copy){
+	*this = copy;
+	std::cout << "Copy constructor called" << std::endl;
+}
+
+ScavTrap&	ScavTrap::operator=(const ScavTrap& copy){
+	name_ = copy.name_;
+	hp_ = copy.hp_;
+	mana_ = copy.mana_;
+	a_dmg_ = copy.a_dmg_;
+	std::cout << "Equal sign operator overload called" << std::endl;
+	return (*this);
+}
