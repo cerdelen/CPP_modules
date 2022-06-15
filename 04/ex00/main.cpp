@@ -31,6 +31,12 @@ int main()
 	doggo->makeSound();
 	Mulain->makeSound();
 
+	doggo = catto;
+
+	std::cout << doggo->getType() << std::endl;
+	doggo->makeSound();
+
+
 	delete(Mulain);
 	delete(catto);
 	delete(doggo);

@@ -7,3 +7,15 @@ Dog::Dog(): Animal("Dog", "barks"){
 Dog::~Dog(){
 	std::cout << "Default Dog Deconstructor!" << std::endl;
 }
+
+Dog::Dog(const Dog& copy){
+	*this = copy;
+	std::cout << "Copy constructor called" << std::endl;
+}
+
+Dog&	Dog::operator=(const Dog& copy){
+	type_ = copy.type_;
+	sound_ = copy.sound_;
+	std::cout << "Equal sign operator overload called" << std::endl;
+	return (*this);
+}
