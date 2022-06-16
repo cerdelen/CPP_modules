@@ -1,6 +1,6 @@
 #include "Dog.hpp"
 
-Dog::Dog(): Animal("Dog", "barks"){
+Dog::Dog(): Animal("Dog"){
 	std::cout << "Default Dog Constructor!" << std::endl;
 }
 
@@ -19,6 +19,6 @@ Dog&	Dog::operator=(const Dog& copy){
 	return (*this);
 }
 
-void	makeSound( void ){
+void	Dog::makeSound( void ){
 	std::cout << "Woof woof!" << std::endl;
 }

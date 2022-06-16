@@ -1,6 +1,6 @@
 #include "Cat.hpp"
 
-Cat::Cat(): Animal("Cat", "miaus")
+Cat::Cat(): Animal("Cat")
 {
 	std::cout << "Default Cat Constructor!" << std::endl;
 }
@@ -21,6 +21,6 @@ Cat&	Cat::operator=(const Cat& copy){
 	return (*this);
 }
 
-void	makeSound( void ){
+void	Cat::makeSound( void ){
 	std::cout << "Miau miau!" << std::endl;
 }
