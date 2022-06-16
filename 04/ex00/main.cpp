@@ -2,24 +2,9 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
 
-// int main()
-// {
-// 	Cat		catto;
-// 	Dog		doggo;
-// 	Animal	Mulain;
-
-
-
-// 	std::cout << doggo.getType() << std::endl;
-
-
-// 	catto.makeSound();
-// 	doggo.makeSound();
-// }
-
 int main()
 {
-	const Animal* Mulain = new Animal(); 
+	const Animal* Mulain = new Animal();
 	const Animal* doggo = new Dog();
 	const Animal* catto = new Cat();
 
@@ -31,11 +16,8 @@ int main()
 	doggo->makeSound();
 	Mulain->makeSound();
 
-	doggo = catto;
-
 	std::cout << doggo->getType() << std::endl;
 	doggo->makeSound();
-
 
 	delete(Mulain);
 	delete(catto);

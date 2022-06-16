@@ -1,4 +1,4 @@
-SRC = main.cpp
+SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp
 
 name = ex01
 
