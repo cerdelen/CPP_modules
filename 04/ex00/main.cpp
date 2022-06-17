@@ -19,6 +19,11 @@ int main()
 	std::cout << doggo->getType() << std::endl;
 	doggo->makeSound();
 
+	Dog *a;
+	Dog *b = new Dog();
+
+	*a = *b;
+
 	delete(Mulain);
 	delete(catto);
 	delete(doggo);
