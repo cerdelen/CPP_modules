@@ -8,6 +8,7 @@ Dog::Dog()
 }
 
 Dog::~Dog(){
+	delete brain_;
 	std::cout << "Default Dog Deconstructor!" << std::endl;
 }
 

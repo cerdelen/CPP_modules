@@ -9,6 +9,7 @@ Cat::Cat()
 
 Cat::~Cat()
 {
+	delete brain_;
 	std::cout << "Default Cat Deconstructor!" << std::endl;
 }
 
