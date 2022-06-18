@@ -1,7 +1,10 @@
 #include "Dog.hpp"
 
-Dog::Dog(): Animal("Dog", "barks"){
-	std::cout << "Default Dog Constructor!" << std::endl;
+Dog::Dog()
+{
+	brain_ = new Brain();
+	type_ = "Dog";
+	std::cout << "Default Dog cconstructor!" << std::endl;
 }
 
 Dog::~Dog(){
@@ -19,6 +22,14 @@ Dog&	Dog::operator=(const Dog& copy){
 	return (*this);
 }
 
-void	makeSound( void ){
+void	Dog::makeSound( void ) const {
 	std::cout << "Woof woof!" << std::endl;
 }
+
+std::string		Dog::getIdea(int i){
+	return (brain_->getIdea(i));
+};
+
+void			Dog::setIdea(int i, std::string idea){
+	brain_->setIdea(i, idea);
+};

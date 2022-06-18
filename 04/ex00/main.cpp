@@ -12,21 +12,21 @@ int main()
 	std::cout << doggo->getType() << " " << std::endl;
 	std::cout << catto->getType() << " " << std::endl;
 
+	Mulain->makeSound();
 	catto->makeSound();
 	doggo->makeSound();
-	Mulain->makeSound();
 
 	std::cout << doggo->getType() << std::endl;
 	doggo->makeSound();
 
-	Dog *a;
-	Dog *b = new Dog();
+	// Dog *a;
+	// Dog *b = new Dog();
 
-	*a = *b;
+	// *a = *b;
 
 	delete(Mulain);
 	delete(catto);
-	delete(doggo);
+	delete(doggo);	
 
 	return (0);
 }

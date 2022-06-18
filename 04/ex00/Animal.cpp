@@ -5,11 +5,6 @@ Animal::Animal(): type_("ANIMAL")
 	std::cout << "Default Animal Constructor!" << std::endl;
 }
 
-Animal::Animal(std::string type): type_(type)
-{
-	std::cout << "Type Animal Constructor!" << std::endl;
-}
-
 void	Animal::makeSound( void ) const{
 	std::cout << "This is just wrong!" << "!" << std::endl;
 }
