@@ -29,7 +29,7 @@ int main(){
 	int	i = 0;
 
 	Bureaucrat	GySchomé("GySchomé", 150);
-	Bureaucrat	GShawn("G-Shawn", 166);
+	Bureaucrat	GShawn("G-Shawn", 1);
 
 	try_and_catch(incremet, i++, GySchomé);
 	try_and_catch(decrement, i++, GySchomé);

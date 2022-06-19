@@ -2,6 +2,7 @@
 
 Bureaucrat::Bureaucrat(const std::string &name, int grade): name_(name){
 	std::cout << "Default Bureaucrat constructor!" << std::endl;
+	setGrade(grade);
 }
 
 Bureaucrat::~Bureaucrat(){
