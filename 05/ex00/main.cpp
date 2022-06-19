@@ -39,5 +39,6 @@ int main(){
 	try_and_catch(incremet, i++, GShawn);
 	try_and_catch(incremet, i++, GShawn);
 
-	std::cout <<  "--------------------------------------------" << std::endl << "End of the tests!" << std::endl << "--------------------------------------------" << std::endl;
+	std::cout <<  "--------------------------------------------" << std::endl << "End of the tests!" << 
+		std::endl << "--------------------------------------------" << std::endl;
 }
