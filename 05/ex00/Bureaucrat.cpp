@@ -52,3 +52,8 @@ void		Bureaucrat::setGrade( int grade ){
 		throw Bureaucrat::GradeTooHighException();
 	grade_ = grade;
 }
+
+std::ostream&	operator<<(std::ostream& os, const Bureaucrat &bur){
+	os << bur.getName() << ", bureaucrat grade " << bur.getGrade();
+	return (os); 
+}
