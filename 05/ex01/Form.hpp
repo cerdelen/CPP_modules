@@ -17,13 +17,17 @@ class Form
 		Form&		operator=(const Form &copy);
 
 		//Getters and Setters
-		std::string	getName( void ) const;
-		bool		getSign( void ) const;
-		void		getSignreq( void ) const;
-		void		getExecreq( void ) const;
+		std::string		getName( void ) const;
+		bool			getSign( void ) const;
+		int				getSignreq( void ) const;
+		int				getExecreq( void ) const;
 
 		//Exceptions
 		class GradeTooLowException : public std::exception{
+			private:
+				virtual const char *what( void ) const throw();
+		};
+		class GradeTooHighException : public std::exception{
 			private:
 				virtual const char *what( void ) const throw();
 		};
