@@ -1,12 +1,12 @@
-#ifndef FORM_H
-#define FORM_H
+#ifndef AFORM_H
+#define AFORM_H
 
 #include "Bureaucrat.hpp"
 #include <iostream>
 
 class Bureaucrat;
 
-class Form
+class AForm
 {
 	private:
 		const std::string	name_;
@@ -14,10 +14,10 @@ class Form
 		const int			req_grad_sign;
 		const int			req_grad_exec;
 	public:
-		Form(std::string name, int s_req, int e_req);
-		Form(const Form& copy);
-		~Form();
-		Form&		operator=(const Form &copy);
+		AForm(std::string name, int s_req, int e_req);
+		AForm(const AForm& copy);
+		~AForm();
+		AForm&		operator=(const AForm &copy);
 
 		//Getters
 		std::string		getName( void ) const;

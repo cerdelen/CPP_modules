@@ -1,4 +1,4 @@
-SRC = main.cpp 
+SRC = main.cpp Form.cpp Bureaucrat.cpp
 
 name = ex01
 
