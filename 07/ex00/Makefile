@@ -1,13 +1,17 @@
-SRC = phonebook.cpp Contact.cpp main.cpp
+SRC = main.cpp My_Templates.cpp 
 
-name = phonebook
+name = ex00
 
 flags = -std=c++98 -Wall -Wextra -Werror
 
 all:
 	g++ $(flags) $(SRC) -o $(name)
 
+test:
+	g++ $(SRC) -o $(name)
+	./$(name)
+
 clean:
 	rm $(name)
 
-re: fclean all
+re: clean all
