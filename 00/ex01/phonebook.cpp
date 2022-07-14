@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 11:57:17 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/14 21:26:09 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/07/14 21:33:52 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,11 @@ void	Phonebook::search_cont( void )
 	int			ind;
 	std::string	check;
 
+	if (this->amt == 0)
+	{
+		std::cout << std::endl<< "No contacts in your phonebook yet!" << std::endl << std::endl;
+		return ;
+	}
 	while (true)
 	{
 		display_contacts(this);
