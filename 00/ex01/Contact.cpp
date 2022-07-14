@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 11:57:10 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/11 11:57:12 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/07/14 21:55:23 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,16 @@ void	Contact::display_contacts_short(){
 }
 
 void	Contact::display_contact_full(){
-	std::cout << f_name << std::endl << l_name << 
-	std::endl << n_name << std::endl<< number << std::endl << secret << std::endl;
+	std::cout << std::endl << "First Name:    " << f_name;
+	std::cout << std::endl << "Last Name:     " << l_name;
+	std::cout << std::endl << "Nick Name:     " << n_name;
+	std::cout << std::endl << "Number:        " << number;
+	std::cout << std::endl << "Secret:        " << secret << std::endl << std::endl;
+
+
+
+
+	
+	// std::cout << f_name << std::endl << l_name << 
+	// std::endl << n_name << std::endl<< number << std::endl << secret << std::endl;
 }

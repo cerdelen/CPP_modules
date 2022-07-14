@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 11:57:15 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/11 11:57:16 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/07/14 21:57:16 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,9 @@ int main()
 
 	while (true)
 	{
-		std::cout << "Please enter one of the following commands: \"ADD\" | \"SEARCH\" | \"EXIT\"" << std::endl;
+		std::cout << std::endl << "Please enter one of the following commands: \"ADD\" | \"SEARCH\" | \"EXIT\"" << std::endl;
 		std::cin >> command;
+		std::cout << std::endl;
 
 		if (command == "ADD" || command == "add")
 			commandnr = 1;
@@ -35,6 +36,9 @@ int main()
 			commandnr = 0;
 		switch (commandnr)
 		{
+		case 0:
+			std::cout << "Invalid Command!" << std::endl;
+			break;
 		case 1:
 			a->add_cont();
 			break;

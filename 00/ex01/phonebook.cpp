@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 11:57:17 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/14 21:33:52 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/07/14 21:52:10 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,14 +87,15 @@ void	Phonebook::search_cont( void )
 	}
 	while (true)
 	{
+		std::cout << std::endl << "Which contact do you want to see?" << std::endl;
 		display_contacts(this);
-		std::cout << "Which contact do you want to see?" << std::endl;
 		std::cin >> check;
 		ind	= check_valid_ind(check);
-		if (ind != -1)
+		if (ind != -1 && ind <= this->amt-1)
 		{
 			this->c_list[ind].display_contact_full();
 			break;
 		}
+		std::cout << std::endl << "Invalid Input!" << std::endl << std::endl;
 	}
 }
