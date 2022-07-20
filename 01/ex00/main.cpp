@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 11:57:23 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/11 11:57:24 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/07/20 23:35:23 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int	main()
 {
 	Zombie	*ptr;
 	
-	ptr = newZombie("Old_Man");
+	ptr = newZombie("Zombie_name");
 	ptr->announce();
 	delete ptr;
-	randomChump("Knoodle");
+	randomChump("Random_Chump_name");
 }
