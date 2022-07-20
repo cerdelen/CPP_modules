@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 11:57:17 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/14 21:52:10 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/07/20 18:46:16 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,14 @@ void	Phonebook::push_new_cont(Phonebook *a, Contact last_cont)
 	a->c_list[0] = last_cont;
 };
 
+bool	is_allnum(std::string c)
+{
+	for(int i = 0; c[i]; i++)
+		if (c[i] < 47 || c[i] > 58)
+			return (false);
+	return (true);
+}
+
 void	Phonebook::add_cont( void )
 {
 	std::string f_name;
@@ -43,15 +51,29 @@ void	Phonebook::add_cont( void )
 
 	std::cout << "Please give in following Information:" << std::endl << "First Name:" << std::endl;
 	std::getline(std::cin, f_name);
-	std::getline(std::cin, f_name);
+	while (f_name.size() == 0)
+		std::getline(std::cin, f_name);
 	std::cout << "Last Name:" << std::endl;
-	std::getline(std::cin, l_name);
+	while (l_name.size() == 0)
+		std::getline(std::cin, l_name);
 	std::cout << "Nickname:" << std::endl;
-	std::getline(std::cin, n_name);
+	while (n_name.size() == 0)
+		std::getline(std::cin, n_name);
 	std::cout << "Their darkest secret:" << std::endl;
-	std::getline(std::cin, secret);
+	while (secret.size() == 0)
+		std::getline(std::cin, secret);
 	std::cout << "Their phonenumber:" << std::endl;
-	std::getline(std::cin, number);
+	while (true)
+	{
+		std::getline(std::cin, number);
+		if (number.size() > 0)
+		{
+			if (is_allnum(number))
+				break ;
+			else
+				std::cout << "Number can only contain digits!" << std::endl;
+		}	
+	}
 	
 	Contact last_cont(f_name, l_name, n_name, secret, number);
 

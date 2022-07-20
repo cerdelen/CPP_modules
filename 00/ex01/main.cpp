@@ -6,12 +6,14 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 11:57:15 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/14 21:57:16 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/07/20 18:31:35 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 #include "Phonebook.hpp"
+
+// #include
 
 int main()
 {
@@ -23,14 +25,14 @@ int main()
 	while (true)
 	{
 		std::cout << std::endl << "Please enter one of the following commands: \"ADD\" | \"SEARCH\" | \"EXIT\"" << std::endl;
-		std::cin >> command;
+		std::getline(std::cin, command);
 		std::cout << std::endl;
 
-		if (command == "ADD" || command == "add")
+		if (command.compare("ADD") == 0|| command.compare("add") == 0)
 			commandnr = 1;
-		else if (command == "SEARCH" || command == "search")
+		else if (command.compare("SEARCH") == 0|| command.compare("search") == 0)
 			commandnr = 2;
-		else if (command == "EXIT" || command == "exit")
+		else if (command.compare("EXIT") == 0|| command.compare("exit") == 0)
 			commandnr = 3;
 		else
 			commandnr = 0;
