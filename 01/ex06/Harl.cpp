@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 11:58:57 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/11 11:58:58 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/07/22 10:11:37 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void Harl::other( void ){
 }
 
 void	Harl::complain(std::string level){
-	std::string levels[4] = {"Debug", "Info", "Warning", "Error"};
+	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	void (Harl::*functions[5])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error, &Harl::other};
 	int	num = 0;
 	for(int i = 0; i < 4; i++)
