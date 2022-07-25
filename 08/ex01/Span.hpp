@@ -19,7 +19,4 @@ class Span
 		int		shortestSpan();
 };
 
-
-
-
 #endif

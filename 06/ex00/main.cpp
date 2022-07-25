@@ -8,6 +8,5 @@ int main(int argc, char **argv)
 		return (0);
 	}
 	converter x(argv[1]);
-	x.getChar();
-	// x.print_all();
+	x.print_all();
 }
