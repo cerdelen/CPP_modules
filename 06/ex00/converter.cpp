@@ -7,6 +7,11 @@ converter::converter(std::string input): double_val_(0), nan_(false), inff_(fals
 		inff_n_ = true;
 	else if (input.compare("nanf") == 0 || input.compare("nan") == 0)
 		nan_ = true;
+	else if (is_float(input) == true || is_double(input) == true)
+	{
+		// std::cout << "got here" << std::endl;
+		double_val_ = std::stod(input);
+	}
 	else if (is_allnum(input) == false)
 	{
 		inval_arg = true;
@@ -83,7 +88,10 @@ void	converter::printFloat( void ) const {
 		return ;
 	}
 	float a = (float)getDouble();
-	std::cout << a << std::endl;
+	std::cout << a;
+	if (!(a / (int)a > 1))
+		std::cout << ".0";
+	std::cout << "f" << std::endl;
 }
 
 void	converter::printDouble( void ) const {
@@ -104,7 +112,10 @@ void	converter::printDouble( void ) const {
 		return ;
 	}
 	double a = getDouble();
-	std::cout << a << std::endl;
+	std::cout << a;
+	if (!(a / (int)a > 1))
+		std::cout << ".0";
+	std::cout << std::endl;
 }
 
 double	converter::getDouble( void ) const {
@@ -116,5 +127,57 @@ bool	converter::is_allnum(std::string c)
 	for(int i = 0; c[i]; i++)
 		if (c[i] < 47 || c[i] > 58)
 			return (false);
+	return (true);
+}
+
+bool	converter::is_float(std::string c)
+{
+	int	i = 0;
+	while (c[i])
+	{
+		if (c[i] == '.')
+		{
+			i++;
+			break ;
+		}
+		if (c[i] < 47 || c[i] > 58)
+			return (false);
+		i++;
+	}
+	if (!c[i] || i == 1)
+			return (false);
+	while (c[i + 1])
+	{
+		if (c[i] < 47 || c[i] > 58)
+			return (false);
+		i++;
+	}
+	if (c[i] != 'f')
+			return (false);
+	return (true);
+}
+
+bool	converter::is_double(std::string c)
+{
+	int	i = 0;
+	while (c[i])
+	{
+		if (c[i] == '.')
+		{
+			i++;
+			break ;
+		}
+		if (c[i] < 47 || c[i] > 58)
+			return (false);
+		i++;
+	}
+	if (!c[i] || i == 1)
+			return (false);
+	while (c[i])
+	{
+		if (c[i] < 47 || c[i] > 58)
+			return (false);
+		i++;
+	}
 	return (true);
 }

@@ -28,6 +28,8 @@ class converter
 		double	getDouble( void ) const ;
 
 		bool	is_allnum(std::string c);
+		bool	is_float(std::string c);
+		bool	is_double(std::string c);
 };
 
 #endif
