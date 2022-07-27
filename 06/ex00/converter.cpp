@@ -39,7 +39,7 @@ void	converter::print_all( void ) const {
 }
 
 void	converter::printChar( void ) const {
-	std::cout << "Char: ";
+	std::cout << "Char:         ";
 	if (nan_ || inff_ || inff_n_)
 	{
 		std::cout << "impossible" << std::endl;
@@ -55,7 +55,7 @@ void	converter::printChar( void ) const {
 }
 
 void	converter::printInt( void ) const {
-	std::cout << "Int: ";
+	std::cout << "Int:          ";
 	if (nan_ || inff_ || inff_n_)
 	{
 		std::cout << "impossible" << std::endl;
@@ -66,7 +66,7 @@ void	converter::printInt( void ) const {
 }
 
 void	converter::printFloat( void ) const {
-	std::cout << "Float: ";
+	std::cout << "Float:        ";
 	if (nan_)
 	{
 		std::cout << "nanf" << std::endl;
@@ -87,7 +87,7 @@ void	converter::printFloat( void ) const {
 }
 
 void	converter::printDouble( void ) const {
-	std::cout << "Double: ";
+	std::cout << "Double:       ";
 	if (nan_)
 	{
 		std::cout << "nan" << std::endl;
