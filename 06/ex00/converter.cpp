@@ -34,13 +34,6 @@ void	converter::print_all( void ) const {
 	printInt();
 	printFloat();
 	printDouble();
-
-
-
-	// std::cout << "Char: " << this->getChar() << std::endl;
-	// std::cout << "Int: " << this->getInt() << std::endl;
-	// std::cout << "Float: " << this->getFloat() << std::endl;
-	// std::cout << "Double: " << this->getDouble() << std::endl;
 }
 
 void	converter::printChar( void ) const {
