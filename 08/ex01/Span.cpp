@@ -66,32 +66,53 @@ void	Span::addNumber(int	nr){
 		for (it = _values.begin(); it != _values.end(); it++)
 		{
 			// *(it + 1)
-			
+			if (nr < _values[0])
+			{
+				_values.insert(it, nr);
+				if ((_values.back() - _values.front()) > long_s)
+					long_s = _values.back() - _values.front();
+
+				if ((_values[1] - _values[0]) < short_s)
+					short_s = _values[1] - _values[0]; 
+				return ;
+			}
 			if (it + 1 == _values.end())
 			{
 				_values.push_back(nr);
-				// if ((_values.back() - _values.front()) > long_s)
-				// 	long_s = _values.back() - _values.front();
+				if ((_values.back() - _values.front()) > long_s)
+					long_s = _values.back() - _values.front();
 				
-				// if ((_values.back() - *it) < short_s)
-				// 	short_s = _values.back() - *it; 
+				if ((_values.back() - *it) < short_s)
+					short_s = _values.back() - *it; 
 				return ;
 			}
 
 
 			if (nr > *it && nr < *(it + 1))
 			{
-				_values.insert(it + 1, nr);
 				// if ((_values.back() - _values.front()) > long_s)
 				// 	long_s = _values.back() - _values.front();
+
+				if ((nr - *it) < short_s)
+					short_s = nr - *it;
+				else if ((*(it + 1) - nr) < short_s)
+					short_s = *(it + 1) - nr;
+
+
+
 				// if ((*it - *(it - 1)) < short_s)
 				// 	short_s = (*it - *(it - 1)); 
+				// else if ((*it - *(it - 1)) < short_s)
+				// 	short_s = (*it - *(it - 1)); 
+
+
+
+
+				_values.insert(it + 1, nr);
 				return ;
 			}
 
 
-			// if (nr > _values[i] && nr < _values[i + 1])
-			// 	_values.insert()
 		}
 	}
 	catch(const std::exception& e)
