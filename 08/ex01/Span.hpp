@@ -19,7 +19,7 @@ class Span
 		int		shortestSpan();
 
 
-		void	test_print();
+		// void	test_print();
 
 	private:
 		std::vector<int>	_values;

@@ -58,14 +58,13 @@ void	Span::addNumber(int	nr){
 				it = _values.begin();
 				_values.insert(it, nr);
 			}
-			// long_s = _values[1] - _values[0]; 
-			// short_s = _values[1] - _values[0]; 
+			long_s = _values[1] - _values[0]; 
+			short_s = _values[1] - _values[0]; 
 			return ;
 		}
 		std::vector<int>::iterator	it;
 		for (it = _values.begin(); it != _values.end(); it++)
 		{
-			// *(it + 1)
 			if (nr < _values[0])
 			{
 				_values.insert(it, nr);
@@ -81,38 +80,19 @@ void	Span::addNumber(int	nr){
 				_values.push_back(nr);
 				if ((_values.back() - _values.front()) > long_s)
 					long_s = _values.back() - _values.front();
-				
 				if ((_values.back() - *it) < short_s)
 					short_s = _values.back() - *it; 
 				return ;
 			}
-
-
 			if (nr > *it && nr < *(it + 1))
 			{
-				// if ((_values.back() - _values.front()) > long_s)
-				// 	long_s = _values.back() - _values.front();
-
 				if ((nr - *it) < short_s)
 					short_s = nr - *it;
 				else if ((*(it + 1) - nr) < short_s)
 					short_s = *(it + 1) - nr;
-
-
-
-				// if ((*it - *(it - 1)) < short_s)
-				// 	short_s = (*it - *(it - 1)); 
-				// else if ((*it - *(it - 1)) < short_s)
-				// 	short_s = (*it - *(it - 1)); 
-
-
-
-
 				_values.insert(it + 1, nr);
 				return ;
 			}
-
-
 		}
 	}
 	catch(const std::exception& e)
@@ -163,14 +143,14 @@ const char *Span::NotEnoughValues::what() const throw(){
 
 
 
-void	Span::test_print(){
-	std::vector<int>::iterator	it;
+// void	Span::test_print(){
+// 	std::vector<int>::iterator	it;
 	
-	std::cout << "size is " << _values.size() << std::endl;
-	for (it = _values.begin(); it != _values.end(); it++)
-	{
-		std::cout << *it << std::endl;
-	}
-	// std::cout << "this is values back and then values front " << _values.back() << " " << _values.front() << " " << (_values.back() - _values.front()) << std::endl;
+// 	std::cout << "size is " << _values.size() << std::endl;
+// 	for (it = _values.begin(); it != _values.end(); it++)
+// 	{
+// 		std::cout << *it << std::endl;
+// 	}
+// 	// std::cout << "this is values back and then values front " << _values.back() << " " << _values.front() << " " << (_values.back() - _values.front()) << std::endl;
 
-}
+// }
