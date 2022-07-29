@@ -21,15 +21,15 @@ class Span
 
 
 		// void	test_print();
-		class	NoMemory : std::exception{
+		class	NoMemory : public std::exception{
 			public:
 				virtual const char *what( void ) const throw();
 		};
-		class	TooManyValues : std::exception{
+		class	TooManyValues : public std::exception{
 			public:
 				virtual const char *what( void ) const throw();
 		};
-		class	NotEnoughValues : std::exception{
+		class	NotEnoughValues : public std::exception{
 			public:
 				virtual const char *what( void ) const throw();
 		};

@@ -111,8 +111,6 @@ int		Span::shortestSpan(){
 void	Span::addRange(std::vector<int>::iterator begin, std::vector<int>::iterator end){
 	while (begin != end)
 	{
-		std::cout << "herelol" << std::endl;
-
 		addNumber(*begin);
 		begin++;
 	}
