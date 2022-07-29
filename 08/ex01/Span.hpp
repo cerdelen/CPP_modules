@@ -15,18 +15,12 @@ class Span
 		Span & operator=(const Span& copy);
 
 		void	addNumber(int);
+		void	addRange(std::vector<int>::iterator, std::vector<int>::iterator);
 		int		longestSpan();
 		int		shortestSpan();
 
 
 		// void	test_print();
-
-	private:
-		std::vector<int>	_values;
-		size_t				_capacity;
-		size_t				long_s;
-		size_t				short_s;
-
 		class	NoMemory : std::exception{
 			public:
 				virtual const char *what( void ) const throw();
@@ -39,6 +33,13 @@ class Span
 			public:
 				virtual const char *what( void ) const throw();
 		};
+
+	private:
+		std::vector<int>	_values;
+		size_t				_capacity;
+		size_t				long_s;
+		size_t				short_s;
+
 };
 
 #endif

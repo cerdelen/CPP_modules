@@ -2,7 +2,7 @@ SRC = main.cpp Span.cpp
 
 name = ex00
 
-# flags = -std=c++98 -Wall -Wextra -Werror
+flags = -std=c++98 -Wall -Wextra -Werror
 
 all:
 	g++ $(flags) $(SRC) -o $(name)

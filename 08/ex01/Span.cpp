@@ -9,12 +9,13 @@ Span::Span(size_t n): long_s(0), short_s(INT_MAX){
 		if (_values.max_size() < n)
 			throw Span::NoMemory();
 		_capacity = n;
+		_values.clear();
 	}
-	catch(const std::exception& error)
+	catch(const Span::NoMemory& error)
 	{
 		std::cerr << error.what() << std::endl;
+		exit(0);
 	}
-	
 }
 
 Span::~Span(){
@@ -38,93 +39,82 @@ Span& Span::operator=(const Span& copy){
 }
 
 void	Span::addNumber(int	nr){
-	try
+	size_t	size = _values.size();
+
+	if (size >= _capacity)
+		throw Span::TooManyValues();
+	if (size == 0)
 	{
-		size_t	size = _values.size();
-		if (size >= _capacity)
-			throw Span::TooManyValues();
-		if (size == 0)
+		_values.push_back(nr);
+		return ;
+	}
+	if (size == 1)
+	{
+		if (nr > _values[0])
+			_values.push_back(nr);
+		else
+		{
+			std::vector<int>::iterator	it;
+			it = _values.begin();
+			_values.insert(it, nr);
+		}
+		long_s = (size_t)(_values[1] - _values[0]); 
+		short_s = (size_t)(_values[1] - _values[0]); 
+		return ;
+	}
+	std::vector<int>::iterator	it;
+	for (it = _values.begin(); it != _values.end(); it++)
+	{
+		if (nr < _values[0])
+		{
+			_values.insert(it, nr);
+			if ((size_t)(_values.back() - _values.front()) > long_s)
+				long_s = _values.back() - _values.front();
+
+			if ((size_t)(_values[1] - _values[0]) < short_s)
+				short_s = _values[1] - _values[0]; 
+			return ;
+		}
+		if (it + 1 == _values.end())
 		{
 			_values.push_back(nr);
+			if ((size_t)(_values.back() - _values.front()) > long_s)
+				long_s = _values.back() - _values.front();
+			if ((size_t)(_values.back() - *it) < short_s)
+				short_s = _values.back() - *it; 
 			return ;
 		}
-		if (size == 1)
+		if (nr > *it && nr < *(it + 1))
 		{
-			if (nr > _values[0])
-				_values.push_back(nr);
-			else
-			{
-				std::vector<int>::iterator	it;
-				it = _values.begin();
-				_values.insert(it, nr);
-			}
-			long_s = _values[1] - _values[0]; 
-			short_s = _values[1] - _values[0]; 
+			if ((size_t)(nr - *it) < short_s)
+				short_s = nr - *it;
+			else if ((size_t)(*(it + 1) - nr) < short_s)
+				short_s = *(it + 1) - nr;
+			_values.insert(it + 1, nr);
 			return ;
 		}
-		std::vector<int>::iterator	it;
-		for (it = _values.begin(); it != _values.end(); it++)
-		{
-			if (nr < _values[0])
-			{
-				_values.insert(it, nr);
-				if ((_values.back() - _values.front()) > long_s)
-					long_s = _values.back() - _values.front();
-
-				if ((_values[1] - _values[0]) < short_s)
-					short_s = _values[1] - _values[0]; 
-				return ;
-			}
-			if (it + 1 == _values.end())
-			{
-				_values.push_back(nr);
-				if ((_values.back() - _values.front()) > long_s)
-					long_s = _values.back() - _values.front();
-				if ((_values.back() - *it) < short_s)
-					short_s = _values.back() - *it; 
-				return ;
-			}
-			if (nr > *it && nr < *(it + 1))
-			{
-				if ((nr - *it) < short_s)
-					short_s = nr - *it;
-				else if ((*(it + 1) - nr) < short_s)
-					short_s = *(it + 1) - nr;
-				_values.insert(it + 1, nr);
-				return ;
-			}
-		}
 	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
-	
 }
 
 int		Span::longestSpan(){
-	try
-	{
-		if (_values.size() < 2)
-			throw Span::NotEnoughValues();
-		return	(long_s);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
+	if (_values.size() < 2)
+		throw Span::NotEnoughValues();
+	return	(long_s);
 }
 
 int		Span::shortestSpan(){
-	try
+	if (_values.size() < 2)
+		throw Span::NotEnoughValues();
+	return	(short_s);
+}
+
+void	Span::addRange(std::vector<int>::iterator begin, std::vector<int>::iterator end){
+	while (begin != end)
 	{
-		if (_values.size() < 2)
-			throw Span::NotEnoughValues();
-		return	(short_s);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << std::endl;
+		std::cout << "herelol" << std::endl;
+
+		addNumber(*begin);
+		begin++;
 	}
 }
 
