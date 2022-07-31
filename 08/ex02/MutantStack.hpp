@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 17:57:34 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/29 23:19:03 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/07/31 11:03:05 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,12 @@ class MutantStack : public std::stack<T>
 		
 		MutantStack		&operator=(const MutantStack &copy);
 		
+		typedef typename std::stack<T>::container_type::iterator iterator;
+		
+	iterator	begin( void );
+	iterator	end( void );
 };
 
-template <typename T>
-MutantStack<T>::MutantStack(){
-	
-}
 
-template <typename T>
-MutantStack<T>::~MutantStack(){
-	
-}
 
 #endif
