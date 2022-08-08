@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 11:58:27 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/11 11:58:28 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/08/06 16:13:31 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,16 @@
 
 class HumanB
 {
-private:
-	std::string name_;
-	Weapon *weap_;
-public:
-	// HumanA(std::string n, Weapon &type){
-	// 	weap_ = type;
-	// 	name_ = n;
-	// };
-	void	setWeapon(Weapon *weap);
-	void	setName(std::string name);
-	HumanB(std::string name);
-	~HumanB();
-	void	attack(void);
+	public:
+		HumanB(std::string name);
+		~HumanB();
+
+		void	setWeapon(Weapon *weap);
+		void	setName(std::string name);
+		void	attack(void);
+	private:
+		std::string		name_;
+		Weapon			*weap_;
 };
 
 #endif

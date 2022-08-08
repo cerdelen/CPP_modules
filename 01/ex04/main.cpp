@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 11:58:41 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/11 11:58:42 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/08/06 16:15:41 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,15 @@
 
 bool check_input(int argc, char **argv, std::ifstream &in_f, std::ofstream &out_f)
 {
-	std::string		out_f_name = argv[1];
-	out_f_name.append(".replace");
-
 	if (argc != 4)
 	{
 		std::cout << "Wrong amount of Arguments!" << std::endl;
 		return false;
 	}
+
+	std::string		out_f_name = argv[1];
+	out_f_name.append(".replace");
+	
 	in_f.open(argv[1], std::fstream::in);
 	if (!in_f.is_open())
 	{
