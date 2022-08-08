@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 11:59:20 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/11 11:59:21 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/08/08 14:52:37 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,6 @@
 
 class Fixed
 {
-	private:
-		int					val_;
-		static const int	bits_ = 8;
-
 	public:
 		Fixed();								//default const
 		Fixed(const int);
@@ -34,6 +30,10 @@ class Fixed
 		void			setRawBits( int const raw );
 		int				toInt( void ) const;
 		float			toFloat( void ) const;
+
+	private:
+		int					val_;
+		static const int	bits_ = 8;
 };
 
 std::ostream&	operator<<(std::ostream &os, const Fixed &nbr);

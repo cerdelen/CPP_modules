@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 11:59:18 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/11 11:59:19 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/08/08 14:54:31 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Fixed::Fixed(const int num){
 
 Fixed::Fixed(const float num){
 	val_ =  roundf(num * (1 << bits_));
-	std::cout << "Int constructor called!" << std::endl;
+	std::cout << "Float constructor called!" << std::endl;
 }
 
 Fixed::Fixed(const Fixed& copy){
