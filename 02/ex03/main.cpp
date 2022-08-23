@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 11:59:42 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/08/08 17:03:36 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/08/08 21:20:20 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main(void)
 	Point a(0, 0);
 	Point b(0.5f, 0.0f);
 	Point c(0, 10);
-	Point p(1, 1);
+	Point p(0, 0);
 
 	if (bsp(a, b, c, p) == true)
 		std::cout << "true" << std::endl;

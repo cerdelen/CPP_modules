@@ -1,4 +1,4 @@
-SRC = main.cpp 
+SRC = AForm.cpp Bureaucrat.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp main.cpp
 
 name = ex02
 

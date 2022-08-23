@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 12:01:35 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/11 12:01:36 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/08/16 20:37:17 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Dog: public Animal
 		~Dog();
 
 		Dog&	operator=(const Dog& copy);
-		void	makeSound( void ) const ;
+		virtual void	makeSound( void ) const ;
 };
 
 #endif

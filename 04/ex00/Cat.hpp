@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 12:01:31 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/11 12:01:32 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/08/16 20:37:11 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Cat: public Animal
 		~Cat();
 
 		Cat&	operator=(const Cat& copy);
-		void	makeSound( void ) const;
+		virtual void	makeSound( void ) const;
 };
 
 

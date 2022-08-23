@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 12:02:01 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/11 12:02:02 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/08/16 20:45:02 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,10 @@ int main()
 	((Dog *)arr[0])->setIdea(0, "This is a great Idea!");
 	std::cout << std::endl << std:: endl << ((Dog *)arr[0])->getIdea(0) << std::endl << std::endl;
 
+	std::cout << std::endl << std:: endl << "this is the brain of copybefore :  " << ((Dog *)arr[1])->getIdea(0) << std::endl << std::endl;
+	arr[1] = arr[0];
+	
+	std::cout << std::endl << std:: endl << "this is the brain of copy:  " << ((Dog *)arr[1])->getIdea(0) << std::endl << std::endl;
 
 	for(int i = 0; i < 4; i++){
 		delete (arr[i]);
