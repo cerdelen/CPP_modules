@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 12:01:41 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/11 12:01:42 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/08/23 23:41:01 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ Animal::Animal(const Animal& copy){
 
 Animal&	Animal::operator=(const Animal& copy){
 	type_ = copy.type_;
-	std::cout << "Equal sign operator overload called" << std::endl;
+	std::cout << "Animal Equal sign operator overload called" << std::endl;
 	return (*this);
 }

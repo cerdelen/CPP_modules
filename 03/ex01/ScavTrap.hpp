@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 12:00:21 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/11 12:00:22 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/08/09 21:08:54 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,5 @@ class ScavTrap: public ClapTrap
 		void	attack(const std::string& target);
 		void	guardGate();
 };
-
-// ScavTrap will use the attributes of ClapTrap (update ClapTrap in consequence) and must initialize them to:
-// • Name, which is passed as parameter to a constructor
-// • Hit points (100), represent the health of the ClapTrap
-// • Energy points (50)
-// • Attack damage (20)
-// ScavTrap will also have its own special capacity:
-//     void guardGate();
 
 #endif

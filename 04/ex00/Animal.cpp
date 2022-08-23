@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 12:01:15 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/11 12:01:16 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/08/23 22:50:37 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,11 @@ Animal::Animal(const Animal& copy){
 	*this = copy;
 	std::cout << "Copy constructor called" << std::endl;
 }
+
+void			Animal::setType( std::string new_type){
+	type_ = new_type;
+}
+
 
 Animal&	Animal::operator=(const Animal& copy){
 	type_ = copy.type_;

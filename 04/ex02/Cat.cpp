@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 12:02:14 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/11 12:02:15 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/08/23 23:46:08 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ Cat::Cat(const Cat& copy){
 }
 
 Cat&	Cat::operator=(const Cat& copy){
+	*this->brain_ = *copy.brain_;
 	type_ = copy.type_;
 	std::cout << "Equal sign operator overload called" << std::endl;
 	return (*this);

@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 12:01:37 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/11 12:01:38 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/08/23 23:02:49 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,24 +21,26 @@ int main()
 	const Animal* catto = new Cat();
 
 	std::cout << Mulain->getType() << std::endl;
-	std::cout << doggo->getType() << " " << std::endl;
-	std::cout << catto->getType() << " " << std::endl;
+	std::cout << doggo->getType() << std::endl;
+	std::cout << catto->getType() << std::endl;
 
 	Mulain->makeSound();
 	catto->makeSound();
 	doggo->makeSound();
 
-	std::cout << doggo->getType() << std::endl;
-	doggo->makeSound();
+	Dog *a = new Dog();
+	Dog *b = new Dog();
 
-	// Dog *a;
-	// Dog *b = new Dog();
 
-	// *a = *b;
 
+	*a = *b;
+
+	
 	delete(Mulain);
 	delete(catto);
 	delete(doggo);	
+	delete(a);	
+	delete(b);	
 
 	return (0);
 }

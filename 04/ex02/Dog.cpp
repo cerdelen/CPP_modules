@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 12:02:18 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/11 12:02:19 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/08/23 23:45:49 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,9 @@ Dog::Dog(const Dog& copy){
 }
 
 Dog&	Dog::operator=(const Dog& copy){
+	*this->brain_ = *copy.brain_;
 	type_ = copy.type_;
-	std::cout << "Equal sign operator overload called" << std::endl;
+	std::cout << "Dog Equal sign operator overload called" << std::endl;
 	return (*this);
 }
 
