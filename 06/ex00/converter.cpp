@@ -8,14 +8,16 @@ converter::converter(std::string input): double_val_(0), nan_(false), inff_(fals
 	else if (input.compare("nanf") == 0 || input.compare("nan") == 0)
 		nan_ = true;
 	else if (is_float(input) == true || is_double(input) == true)
-	{
-		// std::cout << "got here" << std::endl;
 		double_val_ = std::stod(input);
-	}
 	else if (is_allnum(input) == false)
 	{
-		inval_arg = true;
-		std::cout << "Invalid Argument!" << std::endl;
+		if (input.length() > 1 || input[0] < 32 || input[0] > 127)
+		{
+			inval_arg = true;
+			std::cout << "Invalid Argument!" << std::endl;
+		}
+		else 
+			double_val_ = input[0];
 	}
 	else
 		double_val_ = std::stod(input);
