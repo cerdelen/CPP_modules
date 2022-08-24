@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 00:21:02 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/08/24 17:18:31 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/08/24 18:14:30 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,14 @@ int main()
 		}
 	}
 	
-	std::cout << std::endl << "-------------------------------" << std::endl << std::endl;
+	std::cout << std::endl << "-------------------------------1" << std::endl << std::endl;
 	
 	{
 		Intern			intern_;
 		Bureaucrat		bur("Bureaucrat Name", 1);
 		AForm*			form;
 		
-		form = intern_.makeForm("shrubbery creation", "Form Target");
+		form = intern_.makeForm("shrubbery creation", "Form_Target");
 		if (form)
 		{
 			try{
@@ -59,7 +59,7 @@ int main()
 		}
 	}
 	
-	std::cout << std::endl << "-------------------------------" << std::endl << std::endl;
+	std::cout << std::endl << "-------------------------------2" << std::endl << std::endl;
 	
 	{
 		Intern			intern_;

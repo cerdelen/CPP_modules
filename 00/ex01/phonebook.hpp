@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 11:57:19 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/11 11:57:20 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/08/24 19:43:41 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,16 +31,11 @@ class Phonebook
 		Phonebook();
 		~Phonebook();
 
-
 		void	search_cont( void );
 		int		check_valid_ind(std::string x);
 		void	display_contacts(Phonebook *a);
 		void	add_cont( void );
 		void	push_new_cont(Phonebook *a, Contact last_cont);
-
-
-
-
 };
 
 #endif
