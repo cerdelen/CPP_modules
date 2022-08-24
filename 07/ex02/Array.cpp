@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 12:03:17 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/22 10:57:06 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/08/24 21:54:44 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ size_t		Array<T>::size( void ) const {
 
 template  <typename T>
 T&		Array<T>::operator[](size_t n){
-	if (n > size_)
+	if (n >= size_)
 		throw std::out_of_range( "Index out of Range" );
 	return	(elements_[n]);
 }

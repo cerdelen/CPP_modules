@@ -1,4 +1,4 @@
-SRC = main.cpp
+SRC = cpp_07_main.cpp 
 
 HEADERS = iter.hpp
 
