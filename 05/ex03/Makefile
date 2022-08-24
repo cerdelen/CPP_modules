@@ -1,6 +1,6 @@
-SRC = main.cpp 
+SRC = AForm.cpp Bureaucrat.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp main.cpp Intern.cpp
 
-name = ex03
+name = ex02
 
 flags = -std=c++98 -Wall -Wextra -Werror
 
