@@ -1,4 +1,4 @@
-SRC = main.cpp My_Templates.cpp 
+SRC = main.cpp  
 
 name = ex00
 
