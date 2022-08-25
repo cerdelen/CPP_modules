@@ -1,6 +1,6 @@
 SRC = main.cpp
 
-name = ex00
+name = ex02
 
 flags = -std=c++98 -Wall -Wextra -Werror
 

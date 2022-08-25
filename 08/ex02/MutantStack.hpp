@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 17:57:34 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/07/31 11:03:05 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/08/25 13:00:52 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ template <typename T>
 class MutantStack : public std::stack<T>
 {
 	public:
-		MutantStack( void ) :std::stack<T>() {};
+		MutantStack( void );
 		MutantStack(const MutantStack &copy);
 		virtual ~MutantStack();
 		
@@ -31,6 +31,16 @@ class MutantStack : public std::stack<T>
 	iterator	end( void );
 };
 
-
+#include "MutantStack.tpp"
 
 #endif
+
+
+
+
+
+
+
+
+
+
