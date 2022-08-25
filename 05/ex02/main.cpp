@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 00:21:02 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/08/24 00:30:28 by cerdelen         ###   ########.fr       */
+/*   Updated: 2022/08/24 23:21:58 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int main()
 	{
 		Bureaucrat bur("Bureaucrat Name", 1);
 		RobotomyRequestForm form("Form Target");
-		
 		try{
 			bur.signForm(form);
 			bur.execForm(form);
@@ -30,7 +29,6 @@ int main()
 		catch(std::exception& err){
 			std::cout << "Exepction caught: " << err.what() << std::endl;
 		}
-		
 	}
 
 	std::cout << std::endl << "-------------------------------" << std::endl << std::endl;
